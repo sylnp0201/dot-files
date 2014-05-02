@@ -1,0 +1,40 @@
+set nocompatible
+
+filetype on
+filetype plugin on
+filetype indent on
+
+syntax on
+set number
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set showmatch
+set smartcase
+set incsearch
+set ruler
+set hlsearch
+
+" Color scheme
+let g:jellybeans_background_color_256 = 234 
+set t_Co=256 " 256 colors
+let g:solarized_termcolors=256
+set background=dark
+" color Tomorrow-Night
+colorscheme solarized 
+
+" Enable CursorLine
+:autocmd InsertEnter * set cul 
+:autocmd InsertLeave * set nocul
+
+" tab completion for file names
+set wildmode=longest,list,full
+set wildmenu
+
+" keymap
+noremap % v%
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR> " un-highlight with space
+
+" plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctags_statusline=1

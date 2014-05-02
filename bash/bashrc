@@ -1,0 +1,48 @@
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+alias l='ls -l'
+alias gc='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias gff='git flow feature'
+alias glog="git log --color --no-merges" 
+alias glogme='git log --color --no-merges --author=Nianpeng'
+alias gshow='git show --color'
+alias gdiff='git diff --color'
+alias gpick='git cherry-pick'
+alias gpull='git pull --rebase'
+alias bashrc="source ~/.bashrc"
+alias blp_run='be script/server -p3000'
+alias web_run='rails s --debugger -p 8080'
+alias rconsole='bundle exec script/console'
+alias blp='cd ~/works/ruby19'
+alias bcom='cd ~/works/bcom'
+alias bview='cd ~/works/bview'
+alias web='cd ~/works/webanalytics-dashboard'
+alias queue='cd ~/works/q'
+alias psn='cd ~/source/personalization'
+alias ruby19web='rvm 1.9.3@webanalytics'
+alias ruby19='rvm 1.9.3-p194@blp2'
+alias ruby187='rvm 1.8.7@blp2'
+alias rlist='rvm gemset list'
+alias bcom_cache='rm -rf /Users/nli71/works/bcom/tmp/cache/assets/* /Users/nli71/works/bcom/public/assets/*'
+alias mvim='~/source/macvim/mvim'
+alias backupdb='expect ~/db_backup/scp_backup.sh'
+alias bproxy='http_proxy=http://bproxy.cfe.bloomberg.com https_proxy=http://bproxy.cfe.bloomberg.com:80'
+alias hproxy='http_proxy=http://proxy.bloomberg.com:80 https_proxy=http://proxy.bloomberg.com:80 HTTP_PROXY=http://proxy.bloomberg.com:80 HTTPS_PROXY=http://proxy.bloomberg.com:80 ALL_PROXY=http://proxy.bloomberg.com:80'
+alias be='(bundle check || bproxy bundle install) && bundle exec'
+alias bex='bundle exec'
+alias bold='bundle _1.2.3_ exec'
+alias bcom_run='MAP=1 bex rails s -p 3001' 
+alias binstall='bproxy bundle install'
+alias psgrep='ps -ef | grep'
+alias csscomb='php ~/works/CSScomb/csscomb.php'
+export rails_root=/Users/nli71/works/ruby19
+export upid=$rails_root/tmp/pids/unicorn.pid
+export uconf=$rails_root/config/unicorn.rb
+alias start_unicorn='BUNDLE_GEMFILE=$rails_root/Gemfile bundle exec unicorn_rails -c $uconf -E development -D'
+alias stop_unicorn='[ ! -f $upid ] || kill -s QUIT `cat $upid`'
+alias restart_unicorn='([ -f $upid ] && kill -s USR2 `cat $upid`) || ([ ! -f upid} ] && (cd $rails_root && BUNDLE_GEMFILE=$rails_root/Gemfile bundle exec $upid -c $uconf -E develop -D))'
+alias add_ssh='ssh-add ~/.ssh/id_rsa.toolkit'
+export SAUCE_USERNAME=sylnp
+export SAUCE_ACCESS_KEY=1274c534-0f46-4fbf-9af8-c7974404b5d7
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
