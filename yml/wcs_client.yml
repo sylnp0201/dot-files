@@ -1,0 +1,60 @@
+defaults: &defaults
+  base_url:   "http://bcom:webc0ntent@njcldbbgcomap01.addev.bloomberg.com:9000"
+  public_url: "http://njcldbbgcomap01.addev.bloomberg.com"
+  proxy:      "http://bproxy.cfe.bloomberg.com:80"
+  fake:       false
+  cache_ttl:  5
+
+development:
+  <<: *defaults
+#  base_url:   "http://bcom:webc0ntent@localhost:3000"
+#  public_url: "http://localhost:3000"
+#  proxy:       null
+#  cache_ttl:   1
+#  fake:        true
+#
+# staging
+#  base_url:   "http://bcom:webc0ntent@nyclqbbgcomap02.addmz.bloomberg.com:9000"
+#  public_url: "http://stagingnewsadmin.dmz.bloomberg.com"
+# production
+  base_url:   "http://bcom:webc0ntent@nyappdmz01.addmz.bloomberg.com:9000"
+  public_url: "http://localhost:3000"
+  cache_ttl:   60
+
+test:
+  <<: *defaults
+  # fake: true is implicit and doesn't have to be set
+
+ci_precompile:
+  <<: *defaults
+  # fake: true is implicit and doesn't have to be set
+
+dev_cloud: &dev_cloud
+  <<: *defaults
+  base_url:   <%= "http://bcom:webc0ntent@#{Socket.gethostname.gsub('bcm', 'com')}.addev.bloomberg.com:9000" %>
+  public_url: <%= "http://#{Socket.gethostname.gsub('bcm', 'com')}.addev.bloomberg.com" %>
+  proxy: null
+
+staging: &staging
+  <<: *defaults
+  base_url:   "http://bcom:webc0ntent@nyclqbbgcomap02.addmz.bloomberg.com:9000"
+  public_url: "http://stagingnewsadmin.dmz.bloomberg.com"
+  proxy:      null
+
+staging_standalone:
+  <<: *staging
+
+production:
+  <<: *defaults
+  # NOTE: the %s in base_url will become either 'nj' or 'ny'
+  base_url:   "http://bcom:webc0ntent@%sbloombergcom.bdns.bloomberg.com:9000"
+  public_url: "http://www.bloomberg.com"
+  proxy:      null
+  open_timeout: 3.5
+  timeout: 30
+
+sandcastle:
+  <<: *defaults
+  base_url:   "http://bcom:webc0ntent@nyclpbbgdemap02.addmz.bloomberg.com:9000"
+  public_url: "http://sandcastle.bloomberg.com"
+  proxy:      null
