@@ -1,0 +1,24 @@
+{
+    // Theme and scheme
+    "color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+    "soda_classic_tabs": true,
+    "soda_folder_icons": true,
+    "theme": "Soda Light.sublime-theme",
+
+    // Editor configs
+    "trim_trailing_white_space_on_save": true,
+    "font_size": 13.0,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "drag_text": false,
+
+    // File management
+    "folder_exclude_patterns": [
+        ".svn", ".git", ".hg", "CVS", ".idea", ".grunt", ".sass-cache",
+        "node_modules/*"
+    ],
+    "ignored_packages":
+    [
+        "Vintage"
+    ]
+}

@@ -1,0 +1,7 @@
+[
+    { "keys": ["super+d"], "command": "duplicate_line" },
+    { "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+    { "keys": ["super+y"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["super+shift+n"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+    { "keys": ["super+s"], "command": "save_all" }
+]
