@@ -7,6 +7,7 @@
 
     // Editor configs
     "trim_trailing_white_space_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
     "font_size": 13.0,
     "tab_size": 4,
     "translate_tabs_to_spaces": true,
@@ -14,8 +15,7 @@
 
     // File management
     "folder_exclude_patterns": [
-        ".svn", ".git", ".hg", "CVS", ".idea", ".grunt", ".sass-cache",
-        "node_modules/*"
+        ".svn", ".git", ".hg", "CVS", ".idea", ".grunt", ".sass-cache"
     ],
     "ignored_packages":
     [
