@@ -1,24 +1,24 @@
 {
-    // Theme and scheme
-    "color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
-    "soda_classic_tabs": true,
-    "soda_folder_icons": true,
-    "theme": "Soda Light.sublime-theme",
-
-    // Editor configs
-    "trim_trailing_white_space_on_save": true,
-    "ensure_newline_at_eof_on_save": true,
-    "font_size": 13.0,
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true,
-    "drag_text": false,
-
-    // File management
-    "folder_exclude_patterns": [
-        ".svn", ".git", ".hg", "CVS", ".idea", ".grunt", ".sass-cache"
-    ],
-    "ignored_packages":
-    [
-        "Vintage"
-    ]
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".sass-cache",
+		"vendor",
+		".idea",
+		".grunt",
+		"node_modules",
+		// "public",
+		"build",
+		".git",
+		"log"
+	],
+	"font_size": 13.0,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
+	"theme": "Soda Light.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"drag_text": false,
+	"show_tab_close_buttons": false,
 }
+
