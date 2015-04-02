@@ -18,6 +18,7 @@
 	"soda_folder_icons": true,
 	"theme": "Soda Light.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
+	"translate_tabs_to_spaces": true,
 	"drag_text": false,
 	"show_tab_close_buttons": false,
 }
