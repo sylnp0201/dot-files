@@ -10,6 +10,7 @@ alias gpull='git pull --rebase'
 alias gs='git status'
 alias gshow='git show --color'
 alias l='ls -l'
+alias login="ssh -t nli71@v5devgateway.bdns.bloomberg.com 'inline $1'"
 alias web='cd ~/works/webanalytics-dashboard'
 
 # proxy alias
