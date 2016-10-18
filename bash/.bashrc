@@ -35,3 +35,8 @@ alias alltabs='gadflytabs bviewtabs'
 alias encrypt='node /Users/nli71/works/encryptor/encryptor.js'
 
 ulimit -n 4096
+
+# functions
+gtc () {
+  git log --no-merges --color "$1"..HEAD
+}
